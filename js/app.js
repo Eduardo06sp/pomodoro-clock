@@ -24,11 +24,13 @@ function countMinDown() {
 
 function setTimer() {
   if (status.classList.contains('ready') || status.classList.contains('break')) {
-    min.textContent = 25;
-    sec.textContent = 0;
-  }
+    status.textContent = 'Focus!'
+    status.classList.remove('ready');
+    status.classList.add('focus');
 
-  if (status.classList.contains('focus')) {
+    min.textContent = 1;
+    sec.textContent = 0;
+  } else if (status.classList.contains('focus')) {
     min.textContent = 5;
     sec.textContent = 0;
   }
