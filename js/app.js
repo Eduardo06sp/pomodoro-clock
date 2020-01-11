@@ -7,7 +7,7 @@ const sec = document.querySelector('.sec');
 
 function countSecDown() {
   if (min.textContent == 0 && sec.textContent == 0) {
-    clearInterval(secTimer);
+    clearInterval(countSecDown);
   } else {
     countMinDown();
     sec.textContent -= 1;
