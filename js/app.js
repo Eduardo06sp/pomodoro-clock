@@ -1,8 +1,9 @@
 /** COUNT DOWN 25 MINUTES **/
+
+const startButton = document.querySelector('.start');
 const min = document.querySelector('.min');
 const sec = document.querySelector('.sec');
 
-const secTimer = setInterval(countSecDown, 1000);
 
 function countSecDown() {
   if (min.textContent == 0 && sec.textContent == 0) {
@@ -19,3 +20,9 @@ function countMinDown() {
     min.textContent -= 1;
   }
 }
+
+function start() {
+  const secTimer = setInterval(countSecDown, 1000);
+}
+
+startButton.addEventListener('click', start);
