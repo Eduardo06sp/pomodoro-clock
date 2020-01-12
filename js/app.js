@@ -9,10 +9,9 @@ let secTimer;
 
 
 function countSecDown() {
-  timerRunning = 1;
-
   if (min.textContent == 0 && sec.textContent == 0) {
     clearInterval(secTimer);
+    timerRunning = 0;
   } else {
     countMinDown();
     sec.textContent -= 1;
@@ -46,11 +45,12 @@ function setTimer() {
 
 function start() {
   if (timerRunning == 1) {
-    clearInterval(secTimer);
+    return;
   }
 
   setTimer();
   secTimer = setInterval(countSecDown, 1000);
+  timerRunning = 1;
 }
 
 startButton.addEventListener('click', start);
