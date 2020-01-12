@@ -1,10 +1,12 @@
 /** COUNT DOWN 25 MINUTES **/
 
 const startButton = document.querySelector('.start');
+const pauseButton = document.querySelector('.pause');
 const status = document.querySelector('.work-mode');
 const min = document.querySelector('.min');
 const sec = document.querySelector('.sec');
 let timerRunning = 0;
+let timerPaused = 0;
 let secTimer;
 
 
@@ -53,4 +55,14 @@ function start() {
   timerRunning = 1;
 }
 
+function pause() {
+  if (timerRunning == 0) {
+    return;
+  } else {
+    clearInterval(secTimer);
+    timerPaused = 1;
+  }
+}
+
 startButton.addEventListener('click', start);
+pauseButton.addEventListener('click', pause);
