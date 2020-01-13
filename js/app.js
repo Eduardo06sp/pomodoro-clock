@@ -76,6 +76,7 @@ function pause() {
 function stop() {
   clearInterval(secTimer);
 
+  pomodoros.textContent = 0;
   status.textContent = 'All ready.';
   status.classList.add('ready');
   status.classList.remove('focus');
