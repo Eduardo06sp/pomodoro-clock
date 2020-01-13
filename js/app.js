@@ -37,6 +37,7 @@ function setTimer() {
   if (status.classList.contains('ready') || status.classList.contains('break')) {
     status.textContent = 'Focus!'
     status.classList.remove('ready');
+    status.classList.remove('break');
     status.classList.add('focus');
 
     min.textContent = 1;
