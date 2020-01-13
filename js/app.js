@@ -50,7 +50,10 @@ function start() {
     return;
   }
 
-  setTimer();
+  if (status.classList.contains('ready') || (min.textContent == 0 && sec.textContent == 0)) {
+    setTimer();
+  }
+
   secTimer = setInterval(countSecDown, 1000);
   timerRunning = 1;
 }
@@ -60,7 +63,7 @@ function pause() {
     return;
   } else {
     clearInterval(secTimer);
-    timerPaused = 1;
+    timerRunning = 0;
   }
 }
 
