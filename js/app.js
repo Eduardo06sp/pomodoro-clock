@@ -2,6 +2,7 @@
 
 const startButton = document.querySelector('.start');
 const pauseButton = document.querySelector('.pause');
+const stopButton = document.querySelector('.stop');
 const status = document.querySelector('.work-mode');
 const min = document.querySelector('.min');
 const sec = document.querySelector('.sec');
@@ -67,5 +68,18 @@ function pause() {
   }
 }
 
+function stop() {
+  clearInterval(secTimer);
+
+  status.textContent = 'All ready.';
+  status.classList.add('ready');
+  status.classList.remove('focus');
+  min.textContent = 25;
+  sec.textContent = 0;
+
+  timerRunning = 0;
+}
+
 startButton.addEventListener('click', start);
 pauseButton.addEventListener('click', pause);
+stopButton.addEventListener('click', stop);
