@@ -1,11 +1,13 @@
 /** COUNT DOWN 25 MINUTES **/
 
+const pomodoros = document.querySelector('.pomodoros-count');
 const startButton = document.querySelector('.start');
 const pauseButton = document.querySelector('.pause');
 const stopButton = document.querySelector('.stop');
 const status = document.querySelector('.work-mode');
 const min = document.querySelector('.min');
 const sec = document.querySelector('.sec');
+
 let timerRunning = 0;
 let timerPaused = 0;
 let secTimer;
@@ -15,6 +17,9 @@ function countSecDown() {
   if (min.textContent == 0 && sec.textContent == 0) {
     clearInterval(secTimer);
     timerRunning = 0;
+    if (status.classList.contains('focus')) {
+      pomodoros.textContent = parseInt(pomodoros.textContent) + 1;
+    }
   } else {
     countMinDown();
     sec.textContent -= 1;
