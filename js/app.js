@@ -4,6 +4,7 @@ const pomodoros = document.querySelector('.pomodoros-count');
 const startButton = document.querySelector('.start');
 const pauseButton = document.querySelector('.pause');
 const stopButton = document.querySelector('.stop');
+const increaseButton = document.querySelector('.increase');
 const status = document.querySelector('.work-mode');
 const min = document.querySelector('.min');
 const sec = document.querySelector('.sec');
@@ -87,6 +88,11 @@ function stop() {
   timerRunning = 0;
 }
 
+function increaseMin() {
+  min.textContent = parseInt(min.textContent) + 1;
+}
+
 startButton.addEventListener('click', start);
 pauseButton.addEventListener('click', pause);
 stopButton.addEventListener('click', stop);
+increaseButton.addEventListener('click', increaseMin);
