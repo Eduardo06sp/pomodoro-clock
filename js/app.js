@@ -9,6 +9,8 @@ const decreaseButton = document.querySelector('.decrease');
 const status = document.querySelector('.work-mode');
 const min = document.querySelector('.min');
 const sec = document.querySelector('.sec');
+let lastFocusTime = 25;
+let lastBreakTime = 5;
 
 let timerRunning = 0;
 let timerPaused = 0;
@@ -19,6 +21,13 @@ function countSecDown() {
   if (min.textContent == 0 && sec.textContent == 0) {
     clearInterval(secTimer);
     timerRunning = 0;
+
+    if (status.classList.contains('ready') || status.classList.contains('focus')) {
+      min.textContent = lastBreakTime;
+    } else if (status.classList.contains('break')) {
+      min.textContent = lastFocusTime;
+    }
+
     if (status.classList.contains('focus')) {
       pomodoros.textContent = parseInt(pomodoros.textContent) + 1;
     }
