@@ -23,8 +23,10 @@ function countSecDown() {
     timerRunning = 0;
 
     if (status.classList.contains('ready') || status.classList.contains('focus')) {
+      status.textContent = 'Get ready for break time!';
       min.textContent = lastBreakTime;
     } else if (status.classList.contains('break')) {
+      status.textContent = 'Get ready to focus!';
       min.textContent = lastFocusTime;
     }
 
