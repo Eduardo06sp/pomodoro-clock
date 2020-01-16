@@ -5,6 +5,7 @@ const startButton = document.querySelector('.start');
 const pauseButton = document.querySelector('.pause');
 const stopButton = document.querySelector('.stop');
 const increaseButton = document.querySelector('.increase');
+const decreaseButton = document.querySelector('.decrease');
 const status = document.querySelector('.work-mode');
 const min = document.querySelector('.min');
 const sec = document.querySelector('.sec');
@@ -87,10 +88,23 @@ function stop() {
 }
 
 function increaseMin() {
+  if (timerRunning == 1) {
+    return;
+  }
+
   min.textContent = parseInt(min.textContent) + 1;
+}
+
+function decreaseMin() {
+  if (timerRunning == 1) {
+    return;
+  }
+
+  min.textContent = parseInt(min.textContent) - 1;
 }
 
 startButton.addEventListener('click', start);
 pauseButton.addEventListener('click', pause);
 stopButton.addEventListener('click', stop);
 increaseButton.addEventListener('click', increaseMin);
+decreaseButton.addEventListener('click', decreaseMin);
