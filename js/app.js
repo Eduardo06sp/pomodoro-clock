@@ -41,14 +41,12 @@ function setTimer() {
     status.classList.remove('break');
     status.classList.add('focus');
 
-    min.textContent = 1;
     sec.textContent = 0;
   } else if (status.classList.contains('focus')) {
     status.textContent = 'Break Time!'
     status.classList.remove('focus');
     status.classList.add('break');
 
-    min.textContent = 5;
     sec.textContent = 0;
   }
 }
