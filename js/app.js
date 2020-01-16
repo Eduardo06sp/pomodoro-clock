@@ -111,7 +111,7 @@ function increaseMin() {
 }
 
 function decreaseMin() {
-  if (timerRunning == 1) {
+  if (timerRunning == 1 || min.textContent == 0) {
     return;
   }
 
