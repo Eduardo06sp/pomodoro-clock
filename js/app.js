@@ -57,9 +57,7 @@ function start() {
     return;
   }
 
-  if (status.classList.contains('ready') || (min.textContent == 0 && sec.textContent == 0)) {
     setTimer();
-  }
 
   secTimer = setInterval(countSecDown, 1000);
   timerRunning = 1;
