@@ -100,6 +100,12 @@ function increaseMin() {
   }
 
   min.textContent = parseInt(min.textContent) + 1;
+
+  if (status.classList.contains('focus')) {
+    lastBreakTime = min.textContent;
+  } else if (status.classList.contains('ready') || status.classList.contains('break'))  {
+    lastFocusTime = min.textContent;
+  }
 }
 
 function decreaseMin() {
@@ -108,6 +114,12 @@ function decreaseMin() {
   }
 
   min.textContent = parseInt(min.textContent) - 1;
+
+  if (status.classList.contains('focus')) {
+    lastBreakTime = min.textContent;
+  } else if (status.classList.contains('ready') || status.classList.contains('break'))  {
+    lastFocusTime = min.textContent;
+  }
 }
 
 startButton.addEventListener('click', start);
