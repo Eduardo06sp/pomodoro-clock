@@ -65,7 +65,7 @@ function start() {
     return;
   }
 
-    setTimer();
+  setTimer();
 
   secTimer = setInterval(countSecDown, 1000);
   timerRunning = 1;
@@ -102,7 +102,7 @@ function increaseMin() {
 
   if (status.classList.contains('focus')) {
     lastBreakTime = min.textContent;
-  } else if (status.classList.contains('ready') || status.classList.contains('break'))  {
+  } else if (status.classList.contains('ready') || status.classList.contains('break')) {
     lastFocusTime = min.textContent;
   }
 }
@@ -116,7 +116,7 @@ function decreaseMin() {
 
   if (status.classList.contains('focus')) {
     lastBreakTime = min.textContent;
-  } else if (status.classList.contains('ready') || status.classList.contains('break'))  {
+  } else if (status.classList.contains('ready') || status.classList.contains('break')) {
     lastFocusTime = min.textContent;
   }
 }
