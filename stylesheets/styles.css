@@ -22,4 +22,17 @@ h1 {
 
 .decrease {
   margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.control {
+  padding: 0 10px;
+}
+
+.controls {
+  margin-top: 0;
+}
+
+.start {
+  font-size: 1.6em;
 }
