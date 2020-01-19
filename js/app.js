@@ -93,6 +93,7 @@ function stop() {
   sec.textContent = 0;
 
   timerRunning = 0;
+  timerPaused = 0;
 }
 
 function increaseMin() {
