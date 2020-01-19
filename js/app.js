@@ -11,7 +11,6 @@ let lastFocusTime = 25;
 let lastBreakTime = 5;
 
 let timerRunning = 0;
-let timerPaused = 0;
 let secTimer;
 
 
