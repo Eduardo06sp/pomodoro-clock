@@ -11,6 +11,7 @@ let lastFocusTime = 25;
 let lastBreakTime = 5;
 
 let timerRunning = 0;
+let timerPaused = 0;
 let secTimer;
 
 function countMinDown() {
@@ -24,6 +25,7 @@ function countSecDown() {
   if (parseInt(min.textContent, 10) === 0 && parseInt(sec.textContent, 10) === 0) {
     clearInterval(secTimer);
     timerRunning = 0;
+    timerPaused = 0;
 
     if (status.classList.contains('ready') || status.classList.contains('focus')) {
       status.textContent = 'Get ready for break time!';
@@ -64,7 +66,9 @@ function start() {
     return;
   }
 
-  setTimer();
+  if (!timerPaused) {
+    setTimer();
+  }
 
   secTimer = setInterval(countSecDown, 1000);
   timerRunning = 1;
@@ -74,6 +78,7 @@ function pause() {
   if (timerRunning === 1) {
     clearInterval(secTimer);
     timerRunning = 0;
+    timerPaused = 1;
   }
 }
 
