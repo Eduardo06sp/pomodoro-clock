@@ -13,6 +13,12 @@ let lastBreakTime = 5;
 let timerRunning = 0;
 let secTimer;
 
+function countMinDown() {
+  if (sec.textContent <= 0) {
+    sec.textContent = 60;
+    min.textContent -= 1;
+  }
+}
 
 function countSecDown() {
   if (min.textContent === 0 && sec.textContent === 0) {
@@ -33,13 +39,6 @@ function countSecDown() {
   } else {
     countMinDown();
     sec.textContent -= 1;
-  }
-}
-
-function countMinDown() {
-  if (sec.textContent <= 0) {
-    sec.textContent = 60;
-    min.textContent -= 1;
   }
 }
 
