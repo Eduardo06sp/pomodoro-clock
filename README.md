@@ -19,3 +19,5 @@ The skills that I used for this particular project include:
 * Test for edge cases to minimize bugs/errors
 
 * Test website using developer tools to account for different screen sizes, including mobile devices
+
+* Use JavaScript linter to find problems and improve code legibility
