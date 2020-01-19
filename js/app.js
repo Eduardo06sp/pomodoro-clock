@@ -45,14 +45,14 @@ function countMinDown() {
 
 function setTimer() {
   if (status.classList.contains('ready') || status.classList.contains('break')) {
-    status.textContent = 'Focus!'
+    status.textContent = 'Focus!';
     status.classList.remove('ready');
     status.classList.remove('break');
     status.classList.add('focus');
 
     sec.textContent = 0;
   } else if (status.classList.contains('focus')) {
-    status.textContent = 'Break Time!'
+    status.textContent = 'Break Time!';
     status.classList.remove('focus');
     status.classList.add('break');
 
