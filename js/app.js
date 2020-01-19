@@ -28,7 +28,7 @@ function countSecDown() {
     }
 
     if (status.classList.contains('focus')) {
-      pomodoros.textContent = parseInt(pomodoros.textContent) + 1;
+      pomodoros.textContent = parseInt(pomodoros.textContent, 10) + 1;
     }
   } else {
     countMinDown();
@@ -98,7 +98,7 @@ function increaseMin() {
     return;
   }
 
-  min.textContent = parseInt(min.textContent) + 1;
+  min.textContent = parseInt(min.textContent, 10) + 1;
 
   if (status.classList.contains('focus')) {
     lastBreakTime = min.textContent;
@@ -112,7 +112,7 @@ function decreaseMin() {
     return;
   }
 
-  min.textContent = parseInt(min.textContent) - 1;
+  min.textContent = parseInt(min.textContent, 10) - 1;
 
   if (status.classList.contains('focus')) {
     lastBreakTime = min.textContent;
