@@ -105,7 +105,7 @@ function increaseMin() {
 }
 
 function decreaseMin() {
-  if (timerRunning === 1 || min.textContent === 0) {
+  if (timerRunning === 1 || parseInt(min.textContent, 10) === 0) {
     return;
   }
 
