@@ -71,9 +71,7 @@ function start() {
 }
 
 function pause() {
-  if (timerRunning === 0) {
-    return;
-  } else {
+  if (timerRunning === 1) {
     clearInterval(secTimer);
     timerRunning = 0;
   }
