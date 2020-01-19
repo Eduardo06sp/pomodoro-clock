@@ -15,7 +15,7 @@ let secTimer;
 
 
 function countSecDown() {
-  if (min.textContent == 0 && sec.textContent == 0) {
+  if (min.textContent === 0 && sec.textContent === 0) {
     clearInterval(secTimer);
     timerRunning = 0;
 
@@ -61,7 +61,7 @@ function setTimer() {
 }
 
 function start() {
-  if (timerRunning == 1) {
+  if (timerRunning === 1) {
     return;
   }
 
@@ -72,7 +72,7 @@ function start() {
 }
 
 function pause() {
-  if (timerRunning == 0) {
+  if (timerRunning === 0) {
     return;
   } else {
     clearInterval(secTimer);
@@ -94,7 +94,7 @@ function stop() {
 }
 
 function increaseMin() {
-  if (timerRunning == 1) {
+  if (timerRunning === 1) {
     return;
   }
 
@@ -108,7 +108,7 @@ function increaseMin() {
 }
 
 function decreaseMin() {
-  if (timerRunning == 1 || min.textContent == 0) {
+  if (timerRunning === 1 || min.textContent === 0) {
     return;
   }
 
