@@ -21,7 +21,7 @@ function countMinDown() {
 }
 
 function countSecDown() {
-  if (min.textContent === 0 && sec.textContent === 0) {
+  if (parseInt(min.textContent, 10) === 0 && parseInt(sec.textContent, 10) === 0) {
     clearInterval(secTimer);
     timerRunning = 0;
 
