@@ -7,3 +7,10 @@ body {
 h1 {
   font-size: 2.4em;
 }
+
+.clock {
+  border: 2px black solid;
+  border-radius: 100%;
+  height: 225px;
+  width: 225px;
+}
