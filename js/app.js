@@ -1,5 +1,3 @@
-/** COUNT DOWN 25 MINUTES **/
-
 const pomodoros = document.querySelector('.pomodoros-count');
 const startButton = document.querySelector('.start');
 const pauseButton = document.querySelector('.pause');
